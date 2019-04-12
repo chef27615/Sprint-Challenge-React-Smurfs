@@ -39,6 +39,15 @@ addSmurf= smurf =>{
   .catch(err=> console.log('addSmurf Error ', err))
 }
 
+buttonGargamel = id =>{
+  axios.delete(`http://localhost:3333/smurfs/${id}`)
+  .then(res=>{
+    this.setState({smurfs:res.data})
+  }).catch(err=>{
+    console.log('delect Error ', err)
+  })
+}
+
 
 
 
@@ -50,7 +59,7 @@ addSmurf= smurf =>{
             The Village!
           </NavLink>
           <NavLink to='/smurf-form'>
-            Add a member
+            new Smurf
           </NavLink>
         </div>
 
@@ -60,6 +69,7 @@ addSmurf= smurf =>{
             <Smurfs 
               {...props}
               smurfs={this.state.smurfs}
+              buttonGargamel={this.buttonGargamel}
             />
           )}  />
         <Route 
