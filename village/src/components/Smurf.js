@@ -14,7 +14,7 @@ class Smurf extends Component {
   }
 
   render(){
-   console.log(this.props.id)
+  //  console.log(this.props.id)
     return (
     <div className="Smurf">
       <h3>{this.props.name}</h3>
