@@ -1,14 +1,20 @@
 import React, { Component }from 'react';
 
 class Smurf extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+
+    }
+  }
 
   buttonGargamel = e =>{
     e.preventDefault();
-    this.props.buttonGargamel(this.state)
+    this.props.buttonGargamel(this.props.id)
   }
 
   render(){
-console.log(this.props.buttonGargamel)
+   console.log(this.props.id)
     return (
     <div className="Smurf">
       <h3>{this.props.name}</h3>

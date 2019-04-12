@@ -52,6 +52,7 @@ buttonGargamel = id =>{
 
 
   render() {
+    // console.log(this.buttonGargamel)
     return (
       <div className="App">
         <div className="navLinksDiv">
